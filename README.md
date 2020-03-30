@@ -6,7 +6,7 @@ File編集したら自動的にプロセスが再起動するスクリプト
 
 使用例 
 ```
-    python autoreload python app/sample.py
+    python autoreload.py python app/sample.py
 ```
 
 https://github.com/stevekrenzel/autoreload/blob/master/autoreload  
