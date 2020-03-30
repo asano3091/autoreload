@@ -10,7 +10,6 @@ def handler(signum, frame):
     sys.exit(0)
     pass
 
-# SIGINT が発生した時の handler の登録
 signal.signal(signal.SIGINT, handler)
 
 while 1:
