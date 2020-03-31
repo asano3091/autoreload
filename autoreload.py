@@ -33,7 +33,7 @@ path = '.'
 wait = 1
 
 # The process to autoreload
-process = subprocess.Popen(command, shell=True)
+process = subprocess.Popen(command.split(" "))
 
 # The current maximum file modified time under the watched directory
 last_mtime = max(file_times(path))
@@ -44,5 +44,5 @@ while True:
         last_mtime = max_mtime
         print ('## Restarting process on file change ! ##')
         os.kill(process.pid, signal.SIGINT)
-        process = subprocess.Popen(command, shell=True)
+        process = subprocess.Popen(command.split(" "))
     time.sleep(wait)
